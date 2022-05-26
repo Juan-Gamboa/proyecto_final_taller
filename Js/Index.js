@@ -41,6 +41,20 @@ $(document).ready(function(){
     $('.FindL').click(function(){
         $('.FindL').attr('href','../Pages/Login.html');
     });
+    $('.link').click(function(){
+        $('.modalR').animate({
+            top:"0vh",
+        },function(){
+            $('.modalR').css({display:'flex'});
+        });
+    });
+    $('.linkR').click(function(){
+        $('.modalR').animate({
+            top:"-100vh",
+        },function(){
+            $('.modalR').css({display:'none'});
+        });
+    });
     $('#verSubtemas').click(function(){
         $('.contentPage').animate({
             top:"-100vh"
