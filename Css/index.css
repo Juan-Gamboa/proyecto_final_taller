@@ -4,6 +4,7 @@ body {
 }
 .contentHeader {
   background-color: #ececec;
+  width: 100vw;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -137,24 +138,21 @@ body {
 }
  
 /*Inicio pagina*/
-.content {
-  min-width: 100vw;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  flex-wrap: wrap;
-}
 .contentPage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items:flex-start;
   overflow: hidden;
   position: relative;
   overflow-y: auto;
+  height: 100vh;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .inicioPage {
   background-color: brown;
@@ -162,14 +160,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: relative;
-  height: calc(100vh - 200px);
+  flex-direction: column;
 }
 .cardInicio {
   margin-top: 10px;
   width: 900px;
-  height: 400px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -251,6 +248,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 600px;
 }
 .containerIn .cardIn{
   position: relative;
@@ -296,6 +294,7 @@ body {
 }
 /*tienda*/
 .tiendaPage {
+  position: relative;
   width: 100vw;
   flex-wrap: wrap;
   background-color: brown;
@@ -304,9 +303,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-article{
-  margin-top: 10px;
-}
 .barElement {
   width: 80vw;
   flex-wrap: wrap;
@@ -314,6 +310,7 @@ article{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 30px;
 }
 /*cracion de card promoción*/
 .cardInfo {
@@ -322,6 +319,7 @@ article{
   display: flex;
   justify-content: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 .cardI-header,.cardI-footer {
   width: 95%;
@@ -506,17 +504,20 @@ article{
 }
 /*creacion pagina contacto*/
 .ContactoPage{
-    display: flex;
-    background: brown;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: calc(100vh - 200px);
+  position: relative;
+  width: 100vw;
+  flex-wrap: wrap;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .containerC{
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -535,3 +536,67 @@ article{
     z-index: 10;
     box-shadow:0 0 20px rgba(0, 0, 0, 0.192);
  }
+ /*Login page*/
+ .contenedor{
+  width: 100%;
+  padding: 15px;
+}
+.formulario{
+  background: #fff;
+  margin-top: 150px;
+  padding: 3px;
+}
+h1{
+  text-align: center;
+  color: #1a2537;
+  font-size: 40px;
+}
+input[type="text"],
+input[type="password"]{
+  font-size: 20px;
+  width: 82%;
+  padding: 10px;
+  border: none;
+}
+.input-contenedor{
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+.icon{
+  min-width: 50px;
+  text-align: center;
+  color: #999;
+}
+.button{
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background:  #1a2537;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover{
+  background: cadetblue;
+}
+p{
+  text-align: center;
+}
+.link{
+  text-decoration: none;
+    color: #1a2537;
+  font-weight: 600;
+}
+.link:hover{
+   color: cadetblue;
+}
+@media(min-width:768px)
+{
+  .formulario{
+      margin: auto;
+      width: 500px;
+      margin-top: 150px;
+      border-radius: 2%;
+  }
+}
