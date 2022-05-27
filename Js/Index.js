@@ -55,33 +55,12 @@ $(document).ready(function(){
             $('.modalR').css({display:'none'});
         });
     });
-    $('#verSubtemas').click(function(){
-        $('.contentPage').animate({
-            top:"-100vh"
-        });
-        $('.content').animate({
-            left: '0vw'
-        });
-    });
-
-    $('#cerrarModal').click(function(){
-        $('.modalAnimacion').animate({
-            top: '-100vh'
-        },function(){
-            $('.modal').css({display:'none'});
-        });
-        /*/$('.contentPage').animate({
-            top:"0vh"
-        });/*/
-    });
-
-    /*$('body').mousemove(function(ev){
-        console.log(ev.clientY, ev.clientX);
-        $('.puntero').css({
-            left: ev.clientX+"px" ,
-            top: ev.clientY+"px"
-        });
-    });*/
-
-
+    setInterval(function() { 
+        $('#slideshow > div:first')
+          .fadeOut(2000)
+          .next()
+          .fadeIn(2000)
+          .end()
+          .appendTo('#slideshow');
+      },  3000);
 });
